@@ -1,0 +1,87 @@
+#employee-homepage-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px 3px;
+    grid-template-areas: 
+        "nav nav nav "
+        
+}
+
+#reimbursements {
+    grid-area: reimbursement-display;
+    margin-left: 600px;
+    background-color: darkslateblue;
+    font-size: 20px;
+}
+
+#submit-new-reimbursement {
+    grid-area: submit-form;
+    position: absolute;
+    margin-top: 500px;
+    float: left;
+    background-color: darkslateblue;
+}
+
+#submit-new-reimbursement div {
+    display: block;
+    margin-top: 50px;
+    background-color: darkslateblue;
+}
+
+#submit-reimbursement-btn {
+    margin-left: 100px;
+    background-color: darkolivegreen;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 4px;
+    top: 400px;
+}
+
+nav {
+    grid-area: nav;
+}
+
+body {
+    background-image: url('https://elearningindustry.com/wp-content/uploads/2019/12/the-value-of-employee-training.jpg');
+}
+
+h1 {
+    font-style: oblique;
+    font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 70px; 
+    top: 0px;
+    left: 150px;
+    background-color: darkseagreen;
+}
+
+p1 {
+    font-style: oblique;
+    font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 20px;
+    top: 200px;
+    left: 150px;
+    background-color: darkseagreen;
+}
+
+p2 {
+    font-style: oblique;
+    font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 20px;
+    top: 300px;
+    left: 50px;
+    background-color: darkseagreen;
+}
+
+#logout {
+    margin-top: 320px;
+    margin-left: 130px;
+    background-color: darkolivegreen;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 4px;
+    top: 400px;
+}

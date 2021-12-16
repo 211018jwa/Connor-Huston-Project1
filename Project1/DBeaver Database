@@ -1,0 +1,90 @@
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Reimbursement;
+
+CREATE TABLE Users (
+
+	users_id SERIAL PRIMARY KEY,
+	users_username VARCHAR(255) NOT NULL,
+	users_password VARCHAR(255) NOT NULL,
+	users_first_name VARCHAR(255) NOT NULL,
+	users_last_name VARCHAR(255) NOT NULL,
+	users_age INTEGER NOT NULL,
+	users_email VARCHAR(255) NOT NULL,
+	users_role VARCHAR(255) NOT NULL	
+);
+
+INSERT INTO Users
+	(users_username, users_password, users_first_name, users_last_name, users_age, users_email, users_role)
+VALUES
+	('JHunter32', 'Danger32&', 'Jacob', 'Hunter', 25, 'hunterja5@gmail.com', 'Employee'),
+	('FreddieB34', 'Kind435$$', 'Freddie', 'Boggs', 31, 'bfreddie@yahoo.com', 'Finance Manager');
+
+SELECT *
+FROM Users;
+
+CREATE TABLE Reimbursement (
+
+	reimbursement_id SERIAL PRIMARY KEY,
+	reimbursement_amount NUMERIC NOT NULL,
+	reimbursement_submitted TIMESTAMP NOT NULL,
+	reimbursement_resolved TIMESTAMP,
+	reimbursement_status VARCHAR(255) NOT NULL,
+	reimbursement_type VARCHAR(255) NOT NULL,
+	reimbursement_description VARCHAR(255) NOT NULL,
+	reimbursement_reciept BYTEA,
+	reimbursement_author INTEGER NOT NULL,
+	reimbursement_resolver INTEGER,
+	
+	CONSTRAINT fk_users1 FOREIGN KEY(reimbursement_author)
+		REFERENCES Users(users_id),
+		
+	CONSTRAINT fk_users2 FOREIGN KEY(reimbursement_resolver)
+		REFERENCES Users(users_id)
+
+);
+
+INSERT INTO Reimbursement
+	(reimbursement_amount, reimbursement_submitted, reimbursement_status, reimbursement_type, reimbursement_description, reimbursement_reciept, reimbursement_author)
+VALUES
+	(14.67, now(), 'Pending', 'Food', 'McDonalds', null, 1),
+	(234.21, now(), 'Pending', 'Other', 'GameStop', null, 1);
+
+SELECT *
+FROM Reimbursement;
+
+SELECT *
+FROM Users
+WHERE users_username = 'JHunter32' AND users_password = 'Danger32&';
+
+SELECT *
+FROM Users
+WHERE users_id = 1;
+
+SELECT *
+FROM Reimbursement
+WHERE reimbursement_author = 1;
+
+UPDATE Users
+	SET
+		users_username = 'JHunter32',
+		users_password = 'Danger32&',
+		users_first_name = 'Jacob',
+		users_last_name = 'Hunter',
+		users_age = 26,
+		users_email = 'hunterja5@gmail.com',
+		users_role = 'Employee'
+WHERE
+	users_id = 1;
+
+
+UPDATE REIMBURSEMENT 
+	SET
+		reimbursement_resolved = now(),
+		reimbursement_status = 'Approved',
+		reimbursement_resolver = 2
+WHERE
+reimbursement_id = 3;
+
+SELECT reimbursement_reciept
+FROM Reimbursement
+WHERE reimbursement_id = 3;

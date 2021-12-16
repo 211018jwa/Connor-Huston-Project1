@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA_Compatiable" content="IE=edge">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Employee Homepage</title>
+        <link rel = "stylesheet" href = "Employee-homepage.css">
+    </head>
+    <body>
+        
+        <div id = "reimbursement-image-modal" class = "modal" >
+            <div class = "modal-background"></div>
+            <div class = "modal-content">
+            </div>
+            <button class = "modal-close" arria-label = "close"></button>
+        </div>
+
+        <div id = "employee-homepage-grid-container">
+            <nav>
+                <h1>Welcome to the Employee homepage!</h1>
+                <p1>On this page, you are an employee. And as an employee, 
+                    you are responsiable for filling out reimbursements, then
+                    wait to see if one of our finance managers approves it, or denies it.
+                </p1>
+                <p2> If you wish to log out, click here.</p2>
+                <button id = "logout">Logout</button>
+            </nav>
+
+            <div id = "reimbursements">
+                <h2>Reimbursements</h2>
+                <table id = "reimbursement-table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>amount</th>
+                            <th>date-submitted</th>
+                            <th>date-resolved</th>
+                            <th>status</th>
+                            <th>type</th>
+                            <th>description</th>
+                            <th>author-id</th>
+                            <th>resolver-id</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div id = "submit-new-reimbursement">
+                <h2>Submit New Reimbursement</h2>
+
+                <div>
+                    <label for="amount">Amount:</label>
+                    <input type="text" id = "amount" />
+                </div>
+
+                <div>
+                    <label for= "type">Type:</label>
+                    <input type= "text" id = "type" />
+                </div>
+
+                <div>
+                    <label for= "description">Description:</label>
+                    <input type= "text" id = "description" />
+                </div>
+
+                <div>
+                    <label for ="reciept">Reimbursement Reciept Upload(JPEG, PNG, or GIF)</label>
+                    <input type= "file" id = "reciept" />
+                </div>
+
+                <div>
+                    <button id = "submit-reimbursement-btn">Submit reimbursement</button>
+                </div>
+            </div>
+        </div>
+        <script src = "Employee-homepage.js"></script>
+    </body>
+</html>

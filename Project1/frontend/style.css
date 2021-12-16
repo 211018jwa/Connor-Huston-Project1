@@ -1,0 +1,52 @@
+label, input {
+    display: block;
+    margin: auto;
+}
+
+input {
+    margin: auto;
+}
+
+body {
+    background-image: url('https://revcycleintelligence.com/images/site/article_headers/_normal/Handing_over_money.jpg');
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 70px; 
+    top: 0px;
+    left: 150px;
+}
+
+p {
+    font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 30px;
+    top: 100px;
+    left: 250px;
+}
+
+#login-information{
+    display: block;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#login-information a {
+    display: block;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+button {
+    background-color: darkolivegreen;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 4px;
+    top: 400px;
+}

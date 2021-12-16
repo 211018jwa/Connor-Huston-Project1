@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA_Compatiable" content="IE=edge">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Finance Manager Homepage</title>
+        <link rel = "stylesheet" href = "Finance-Manager-homepage.css">
+    </head>
+    <body>
+            <div id = "finance-manager-homepage-grid-container">
+                <nav>
+                    <h1>Welcome to the Finance Manager Homepage!</h1>
+                    <p1>As a finance manager, it is your responsiability to view every single
+                        reimbursement that has been submitted by an employee, and then either 
+                        approve or deny that reimbursement.
+                    </p1>
+                    <p2>If you wish to log out, click here.</p2>
+                    <button id = "logout">Logout</button>
+                </nav>
+
+                <div id = "reimbursement-image-modal" class = "modal">
+                    <div class = "modal-backgroung"></div>
+                    <div class = "modal-content">
+                    </div>
+                    <button class = "modal-close is-large" aria-label = "close"></button>
+                </div>
+
+                <h2 style= "color: firebrick">Reimbursements From All Employees</h2>
+                <table id = "reimbursement-table">
+                    <thead>
+                        <tr>
+                            <th style= "color: firebrick">id</th>
+                            <th style= "color: firebrick">amount</th>
+                            <th style= "color: firebrick">date-submitted</th>
+                            <th style= "color: firebrick">date-resolved</th>
+                            <th style= "color: firebrick">status</th>
+                            <th style= "color: firebrick">type</th>
+                            <th style= "color: firebrick">description</th>
+                            <th style= "color: firebrick">reciept</th>
+                            <th style= "color: firebrick">author-id</th>
+                            <th style= "color: firebrick">resolver-id</th>
+                            <th style= "color: firebrick">Approve</th>
+                            <th style= "color: firebrick">Deny</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        <script src = "Finance-Manager-homepage.js"></script>
+    </body>
+</html>
