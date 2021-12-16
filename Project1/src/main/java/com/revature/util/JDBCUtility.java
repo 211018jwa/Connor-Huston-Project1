@@ -11,8 +11,8 @@ public class JDBCUtility {
 	public static Connection getConnection() throws SQLException {
 		
 		String url = "jdbc:postgresql://localhost:5432/postgres";
-		String username = "postgres";
-		String password = "Elephant06";
+		String username = "********";
+		String password = "*********";
 		
 		Driver postgresDriver = new Driver();
 		DriverManager.registerDriver(postgresDriver);
